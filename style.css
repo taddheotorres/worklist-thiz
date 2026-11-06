@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #151515 50%, #8b0f14 50%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 480px;
+}
+
+.encabezado {
+    text-align: center;
+    color: #f2f2f2;
+    margin-bottom: 24px;
+}
+
+.encabezado h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.encabezado h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #c1121f;
+    margin: 8px auto 0;
+}
+
+.encabezado p {
+    color: #a9a9a9;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.tarjeta {
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.formulario {
+    display: flex;
+    gap: 12px;
+}
+
+.formulario input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    border-bottom: 2px solid #c9c9c9;
+    background: transparent;
+    padding: 8px 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #151515;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.formulario input:focus {
+    border-bottom-color: #c1121f;
+}
+
+.btn-agregar {
+    background-color: #151515;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-agregar:hover {
+    background-color: #c1121f;
+}
+
+.contador {
+    margin: 22px 0 16px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.contador span {
+    color: #c1121f;
+    font-weight: 700;
+}
+
+.lista {
+    list-style: none;
+}
+
+.tarea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fff;
+    border-left: 4px solid #151515;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.tarea input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c1121f;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.tarea .texto {
+    flex: 1;
+    color: #151515;
+    word-break: break-word;
+}
+
+.tarea.completada {
+    border-left-color: #c1121f;
+}
+
+.tarea.completada .texto {
+    text-decoration: line-through;
+    color: #9a9a9a;
+}
+
+.btn-eliminar {
+    background-color: transparent;
+    color: #c1121f;
+    border: 1px solid #c1121f;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #c1121f;
+    color: #fff;
+}
+
+.mensaje-vacio {
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+@media (max-width: 420px) {
+    .formulario {
+        flex-direction: column;
+    }
+
+    .encabezado h1 {
+        font-size: 1.7rem;
+    }
+}
